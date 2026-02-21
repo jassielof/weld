@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": "../",
+      "name": "Weld",
+    },
+    {
+      "path": "../modules/dotenv",
+      "name": "DotEnv",
+    },
+    {
+      "path": "../modules/fangz",
+      "name": "Fangz",
+    },
+    {
+      "path": "../modules/yaml",
+      "name": "YAML",
+    },
+  ],
+}
