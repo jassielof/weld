@@ -1,3 +1,9 @@
 [submodule "modules/dotenv"]
 	path = modules/dotenv
 	url = https://github.com/jassielof/dotenv-zig
+[submodule "modules/fangz"]
+	path = modules/fangz
+	url = https://github.com/jassielof/fangz
+[submodule "modules/yaml"]
+	path = modules/yaml
+	url = https://github.com/jassielof/yaml-zig
