@@ -76,4 +76,20 @@ pub fn build(b: *std.Build) void {
     });
     const docs_step = b.step("docs", "Generate the documentation");
     docs_step.dependOn(&docs.step);
+
+    const tests = b.addTest(.{
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("tests/suite.zig"),
+            .optimize = optimize,
+            .target = target,
+            .imports = &.{.{
+                .name = mod_name,
+                .module = lib_mod,
+            }},
+        }),
+    });
+
+    const run_tests = b.addRunArtifact(tests);
+    const tests_step = b.step("tests", "Run the test suite");
+    tests_step.dependOn(&run_tests.step);
 }
