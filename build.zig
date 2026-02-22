@@ -14,6 +14,14 @@ pub fn build(b: *std.Build) void {
         },
     );
 
+    const yaml_dep = b.dependency(
+        "yaml",
+        .{
+            .target = target,
+            .optimize = optimize,
+        },
+    );
+
     const lib_mod = b.addModule(mod_name, .{
         .root_source_file = b.path("src/lib/root.zig"),
         .target = target,
@@ -34,6 +42,10 @@ pub fn build(b: *std.Build) void {
                 .{
                     .name = "dotenv",
                     .module = dotenv_dep.module("dotenv"),
+                },
+                .{
+                    .name = "yaml",
+                    .module = yaml_dep.module("yaml"),
                 },
             },
         }),

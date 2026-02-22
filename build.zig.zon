@@ -4,9 +4,9 @@
     .fingerprint = 0x1a27cf188993699d,
     .minimum_zig_version = "0.15.2",
     .dependencies = .{
-        .dotenv = .{
-            .path = "modules/dotenv",
-        },
+        .dotenv = .{ .path = "modules/dotenv" },
+        .yaml = .{ .path = "modules/yaml" },
+        .fangz = .{ .path = "modules/fangz" },
     },
     .paths = .{
         "build.zig",

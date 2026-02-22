@@ -1,6 +1,7 @@
 //! By convention, root.zig is the root source file when making a library.
 const std = @import("std");
 const dotenv = @import("dotenv");
+const yaml = @import("yaml");
 
 pub fn bufferedPrint() !void {
     var stdout_buffer: [1024]u8 = undefined;
